@@ -33,7 +33,7 @@
     margin-top: 50px;
     border-style: solid;
     width: 1000px;
-    height: 220px;
+    height: 250px;
     padding: 30px;
 
 }
@@ -41,30 +41,28 @@
     box-shadow: rgb(212, 212, 214)10px 10px;
 }
 
-.content-header {
-    display: flex;
-    justify-content: space-between;
-    border: black 100px;
-    font-size: medium;
-    font-family: Arial, Helvetica, sans-serif;
-}
+.content-header .username{
 
-.content-header i .user{
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: black;
     font-size: x-large;
-    margin-left: 15px;
+    justify-content: left;
+    display: flex;
+    
     
 }
 
-.content-header i {
-    font-size: xx-large;
+.user-logo {
+    display: flex;
+    justify-content: space-between;
 }
 
 .content-header span{
     font-family: Arial, Helvetica, sans-serif;
     color: lightslategray;
     font-size: x-large;
+    
+    
 }
 
 .maincontent {

@@ -20,13 +20,30 @@ $(document).ready(function () {
         //capturing the value of the form
         const tweetStr = $("#tweet-input").val();
        
-          //post method using jQuery
-        $.post( "/tweets", $( "#tweet-input" ).serialize(), reLoadpage);  
+        if (!tweetStr) {
+            $('.error-section').slideDown('fast');
+            $('#error-message').text('Please enter text');
+            return;
+          }
+          if (tweetStr.length > 140) {
+            $('.error-section').slideDown('fast');
+            $('#error-message').text('Max characters exceeded');
+            return;
+          }
+          const serializedData = $(this).serialize();
+
+          $.post('/tweets/', serializedData, (response) => {
+            $('.error-section').slideUp('fast');
+            $('#tweet-input').val('');
+            $('.counter').val('140');
+            console.log(response);
+            loadTweets();
+          
+        });
+
           
         })
-        const reLoadpage = (function() {
-            location.reload();
-        });
+
       
     const renderTweets = function (tweets) {
         for (const tweet of tweets) {
@@ -53,13 +70,13 @@ $(document).ready(function () {
             <p class = "maincontent">${tweet["content"]["text"]}</p>
 
             <div class="content-footer">
-            <span>${(new Date(tweet.created_at)).toString().slice(4, 15)}</span>
+            <span>${timeago.format(tweet.created_at)}</span>
             <div class="media-icon"><i class="fa-solid fa-flag"></i><i class="fa-solid fa-repeat"></i> </i><i class="fa-solid fa-heart"></i></div>
             </div>
             </div>
             `
     );
-            $("#maintweetcontent").append($tweet)   
+            $("#maintweetcontent").prepend($tweet)   
     }
 
 

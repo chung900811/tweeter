@@ -24,6 +24,7 @@
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   </head>
 
   <body>
@@ -49,10 +50,17 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
-      <h1>Lorem ipsum</h1>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum exercitationem assumenda illo quam tenetur soluta amet nemo enim, aliquam laboriosam non consequuntur explicabo accusamus ipsum deserunt eaque quo dolorem maiores?</p>
+
     </main>
+
     <section class="new-tweet">
+      <section class="error-section">
+        <i class="fas fa-exclamation-triangle"></i>
+        <p id="error-message">
+        </p>
+        <i class="fas fa-exclamation-triangle"></i>
+      </section>
+      
       <h2>Compose Tweet</h2>
       <form id='new-tweet' method="POST" action="/tweets">
         <div class="tweettext">
@@ -64,7 +72,8 @@
         </div>
       </div>
       </form>
-      <div id="maintweetcontent"></div>
+      <section id="maintweetcontent"></section>
+    
       
       <!-- <div class="maintweetcontent">
       <div class="content-header">

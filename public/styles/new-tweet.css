@@ -1,18 +1,17 @@
 .error-section{
     margin-top: 1em;
     display:none;
-  }
+}
   
   #error-message {
     display:inline;
     color:red;
-  }
+}
   
   .fa-exclamation-triangle {
     color: red;
-  }
+}
 
-  
 .new-tweet {
     display: flex;
     justify-content: center;

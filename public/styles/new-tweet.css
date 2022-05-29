@@ -1,105 +1,41 @@
-.error-section{
-    margin-top: 1em;
-    display:none;
-}
-  
-  #error-message {
-    display:inline;
-    color:red;
-}
-  
-  .fa-exclamation-triangle {
-    color: red;
-}
-
 .new-tweet {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    font-weight: bold;
-}
-#tweet-input {
-    width: 1000px;
-    height: 40px;
-    border: 0px;
-    background: transparent;
-    color: rgb(53, 52, 52);
-    border-bottom: 4px solid rgb(32, 32, 32);
-}
-.tweetbutton {
-    margin-top: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-family: 'Bungee',sans-serif;
-}
-.submittweet {
-    background-color: #4056A1;
-    font-family: 'Bungee',sans-serif;
-    color: #FFFFFF;
-    font-size: 25px;
-    height: 40px;
-    width: 100px;
+  display: flex;
+  flex-direction: column;
 }
 
-.maintweetcontent {
-    margin-top: 50px;
-    border-style: solid;
-    width: 1000px;
-    height: 250px;
-    padding: 30px;
-
-}
-.maintweetcontent:hover{
-    box-shadow: rgb(212, 212, 214)10px 10px;
+.new-tweet h2 {
+  align-self: center;
 }
 
-.content-header .username{
-
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: black;
-    font-size: x-large;
-    justify-content: left;
-    display: flex;
-    
-    
+#tweet-text {
+  border-width: 0 0 2px 0;
+  border-color: black;
+  background-color: #f4f1ec;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 600;
+  width: 60vw;
+  height: 35px;
 }
 
-.user-logo {
-    display: flex;
-    justify-content: space-between;
+.tweet-buttons {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Bungee', cursive;
+  font-weight: 400;
 }
 
-.content-header span{
-    font-family: Arial, Helvetica, sans-serif;
-    color: lightslategray;
-    font-size: x-large;
-    
-    
+form label {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 600;
 }
 
-.maincontent {
-    color: rgb(0, 0, 0);
+button {
+  border: none;
+  background-color: #4056A1;
+  color: #FFFFFF;
+  height: 30px;
 }
 
-.content-footer {
-    border-top: 4px solid rgb(32, 32, 32);
-    display: flex;
-    justify-content: space-between;
-    padding: 15px;
-    margin-top: 40px;
-    font-size: large;
-
-}
-
-.media-icon i {
-    font-size: 0.75em;
-    padding: 7px;
-    color: blue;
-    
-}
-.media-icon :hover{
-    opacity:0.6;
-
+button:hover {
+  box-shadow: 3px 3px 3px rgb(64 86 161 / 0.7);
 }
